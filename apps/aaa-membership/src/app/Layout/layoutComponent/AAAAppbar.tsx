@@ -1,10 +1,16 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { AAALogo } from '../../Pages/components/Logo';
 import { UiConfig } from '../UiConfig';
- 
+
+import { IconButton } from '@mui/material';
+import {
+  Menu as MenuIcon,
+  ChevronLeft as ChevronLeftIcon,
+} from '@mui/icons-material';
 
 export const AAAAppbar = () => {
   const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -30,12 +36,8 @@ export const AAAAppbar = () => {
         <Box sx={{ [theme.breakpoints.up('sm')]: { display: 'none' } }}>
           <AAALogo size={48}></AAALogo>
         </Box>
-        <Box>
-          <Typography
-            variant="body1"
-            color="info"
-            sx={{ [theme.breakpoints.down('sm')]: { fontSize: '0.8rem' } }}
-          >
+        <Box sx={{ [theme.breakpoints.down('md')]: { display: 'none' } }}>
+          <Typography variant="body1" color="info">
             Supporting our Community since 1969
           </Typography>
           <Typography

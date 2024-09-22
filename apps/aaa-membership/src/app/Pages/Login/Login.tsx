@@ -7,6 +7,7 @@ import { userLoginSchema } from '../../schema/UserLoginSchema';
 import { PageFooter } from '../../Layout/layoutComponent/PageFooter';
 import { FormTextInput } from '../components/FormComponent/FormTextInput';
 import { AAALogo } from '../components/Logo';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const theme = useTheme();
@@ -14,6 +15,9 @@ export const Login = () => {
     mode: 'onChange',
     resolver: zodResolver(userLoginSchema),
   });
+
+  const nav=useNavigate();
+
 
   return (
     <Box
@@ -103,7 +107,7 @@ export const Login = () => {
                     type="password"
                   />
                 </Box>
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" onClick={()=>nav('/pages/member-register')}>
                   Sign in
                 </Button>
                 <Divider></Divider>

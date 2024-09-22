@@ -2,11 +2,10 @@
 import { createTheme } from '@mui/material/styles';
 // import Fade from "@mui/material/Fade";
 
-import { typography } from './base/typography'; 
+import { typography } from './base/typography';
 import { globals } from './base/globals';
- 
-import './base/global.css';
 
+import './base/global.css';
 
 export const aaaColors = {
   primary: {
@@ -128,6 +127,39 @@ export const aaaTheme = createTheme({
           backgroundColor: 'white',
         },
       },
+    },
+  },
+});
+
+export const dashboardTheme = createTheme({
+  cssVariables: {
+    colorSchemeSelector: 'data-toolpad-color-scheme',
+  },
+  colorSchemes: {
+    light: {
+      palette: {
+        background: {
+          default: '#eef2f6',
+          paper: '#EEEEF9',
+        },
+      },
+    },
+    // dark: {
+    //   palette: {
+    //     background: {
+    //       default: '#013C88',
+    //       paper: '#112E4D',
+    //     },
+    //   },
+    // },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 600,
+      lg: 1200,
+      xl: 1536,
     },
   },
 });
