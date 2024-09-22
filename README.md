@@ -9,8 +9,12 @@
 ## Finish your CI setup
 
 [Click here to finish setting up your workspace!](https://cloud.nx.app/connect/n8sytJMZMf)
-
-
+    "@nx/vite": "19.8.0",
+    
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/ui": "^1.3.1",
+    "vite": "^5.0.0",
+    "vitest": "^1.3.1"
 ## Run tasks
 
 To run the dev server for your app, use:
