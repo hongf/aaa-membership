@@ -1,7 +1,7 @@
- 
-import { RouteObject, useRoutes } from 'react-router-dom';
+import { RouteObject, useLocation, useRoutes } from 'react-router-dom';
 import { MemberRegister } from '../../Pages/MemberRegister/MemberRegister';
- 
+import { Box, Typography } from '@mui/material';
+import { DashboardHome } from '../../Pages/DashboardHome';
 
 // Todo add all standalone page route here
 const routes: RouteObject[] = [
@@ -9,8 +9,16 @@ const routes: RouteObject[] = [
     path: '/manage-member',
     element: <MemberRegister />,
   },
+  {
+    path: '/*',
+    element: <DashboardHome />,
+  },
 ];
 
-export const DashboardRouter = (): JSX.Element | null => {
-  return useRoutes(routes);
+export const DashboardRouter = (): JSX.Element => {
+  return (
+    <Box sx={{ display: 'flex', p:1, flexDirection: 'column' }}> 
+      {useRoutes(routes)}
+    </Box>
+  );
 };

@@ -107,7 +107,7 @@ export const Login = () => {
                     type="password"
                   />
                 </Box>
-                <Button variant="contained" size="large" onClick={()=>nav('/pages/member-register')}>
+                <Button variant="contained" size="large" onClick={()=>nav('/dashboard/member-register')}>
                   Sign in
                 </Button>
                 <Divider></Divider>

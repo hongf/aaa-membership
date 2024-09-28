@@ -25,11 +25,10 @@ export const MemberRegister = () => {
     <Container
       maxWidth="md"
       sx={{
-        p: 2,
         display: 'flex',
         flexDirection: 'column',
         background: 'white',
-        my: 2,
+        px: `0 !important`,
       }}
     >
       <Typography variant="h2">Register yourself as a member</Typography>
@@ -81,8 +80,11 @@ export const MemberRegister = () => {
           <Grid size={{ xs: 12 }}>
             <FormTextInput accessor="comment" label="Comment" rows="5" />
           </Grid>
-          <Grid size={{ xs: 12 }} sx={{display:'flex',justifyContent:'center'}}>
-            <Button variant='contained'>Join as new member</Button>
+          <Grid
+            size={{ xs: 12 }}
+            sx={{ display: 'flex', justifyContent: 'center' }}
+          >
+            <Button variant="contained">Join as new member</Button>
           </Grid>
           {/* <Grid size={{ xs: 12 }}>
             <pre>{JSON.stringify(methods.getValues(), null, 4)}</pre>

@@ -1,8 +1,8 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import { AAALogo } from '../../Pages/components/Logo';
 import { UiConfig } from '../UiConfig';
-
-import { IconButton } from '@mui/material';
+import { useDrawerContext } from '../../context/drawer-context';
+import { AppBar, Toolbar, IconButton } from '@mui/material';
 import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
@@ -10,7 +10,7 @@ import {
 
 export const AAAAppbar = () => {
   const theme = useTheme();
-
+  const { isOpened, toggleIsOpened } = useDrawerContext();
   return (
     <Box
       sx={{
@@ -30,6 +30,13 @@ export const AAAAppbar = () => {
           p: 1,
         }}
       >
+        <IconButton
+          color="inherit"
+          onClick={() => toggleIsOpened(!isOpened)}
+          sx={{ padding: theme.spacing(1) }}
+        >
+          {isOpened ? <ChevronLeftIcon /> : <MenuIcon />}
+        </IconButton>
         <Box sx={{ [theme.breakpoints.down('sm')]: { display: 'none' } }}>
           <AAALogo size={101}></AAALogo>
         </Box>
