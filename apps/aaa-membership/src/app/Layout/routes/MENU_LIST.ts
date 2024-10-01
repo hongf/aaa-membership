@@ -35,7 +35,7 @@ export const MENU_LIST: IMenuItem[] = [
     Icon: SummarizeIcon,
   },
   {
-    route: '/dashboard/email',
+    route: '/dashboard/email-management',
     literal: 'Email',
     Icon: ContactMailIcon,
   },

@@ -13,9 +13,9 @@ import { userLoginSchema } from '../../schema/UserLoginSchema';
 
 import { FromSelector } from '../components/FormComponent/FromSelector';
 import { RefPersonTitle, RefCountry } from '../../context/refData';
-import { MemberSearch } from './MemberSearch';
+import { EmailSearch, MemberSearch } from './EmailSearch';
 
-export const DashboardHome = () => {
+export const EmailManagement = () => {
   const methods = useForm({
     mode: 'onChange',
     resolver: zodResolver(userLoginSchema),
@@ -32,11 +32,11 @@ export const DashboardHome = () => {
       }}
     >
       <Typography variant="h2">
-        Dashboard (member management platform)
+       Email Campaign - Keep Our Members Engaged 
       </Typography>
       <FormProvider {...methods}>
         <Grid container columnSpacing={2} rowSpacing={1}>
-          <MemberSearch />
+          <EmailSearch />
         </Grid>
       </FormProvider>
     </Container>

@@ -2,12 +2,18 @@ import { RouteObject, useLocation, useRoutes } from 'react-router-dom';
 import { MemberRegister } from '../../Pages/MemberRegister/MemberRegister';
 import { Box, Typography } from '@mui/material';
 import { DashboardHome } from '../../Pages/DashboardHome';
+import { EmailManagement } from '../../Pages/EmailManagement';
 
 // Todo add all standalone page route here
 const routes: RouteObject[] = [
+ 
   {
     path: '/manage-member',
     element: <MemberRegister />,
+  },
+  {
+    path: '/email-management',
+    element: <EmailManagement />,
   },
   {
     path: '/*',

@@ -16,8 +16,8 @@ export const MenuItem: React.FC<Props> = ({
 }) => {
   const link = (
     <ListItem
-      button
-      selected={selected}
+ 
+      //selected={selected}
       sx={{
         '&:hover': {
           backgroundColor: 'primary.light',

@@ -7,7 +7,7 @@ import { IMenuItem } from '../../schema/IMenuItem';
 export const MenuItemsList = ({ items = [] }: { items?: IMenuItem[] }) => {
   const { pathname } = useLocation();
 
-  if (!items.length) return null;
+  if (!items?.length) return null;
 
   return (
     <Grid>
