@@ -58,36 +58,11 @@ export const FormTextInput = (props: IProps) => {
       if (inputElement !== null) inputElement.value = '';
     }
   }, [reRender]);
-
-  /* inputValue to hold the local input value
-   * only update form value with debounce
-   * trim, for onblur no need debounce
-   * debounce start
-   */
-  // const [inputValue, setInputValue] = useState(getValues(accessor));
-  // const localChangeHandle = (newValue: string) => {
-  //   setInputValue(newValue);
-  // };
-
-  // useEffect(() => {
-  //   const delayInputTimeoutId = setTimeout(() => {
-  //     changeValueInHookForm(inputValue);
-  //   }, 300);
-  //   return () => clearTimeout(delayInputTimeoutId);
-  // }, [inputValue]);
-  /*debounce end */
-
+ 
   const changeValueInHookForm = (newValue: string | number) => {
-    /**
-     * Debouncer kicks off on init
-     * Below is to prevent full validation on init
-     */
+    
     if (getValues(accessor) === newValue) return;
-    /**
-     * There is a potential bug where on init the value from
-     * the input field is number. Safe guard test below to convert
-     * any number to strings beforehand.
-     */
+    
     let cleanValue: string = // Converts any number to string
       (typeof newValue === 'number' ? newValue?.toString() : newValue)?.replace(
         / +/g,

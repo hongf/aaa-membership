@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import { PageLayout } from './Layout/PageLayout';
 import { AAADashboardLayout } from './Layout/AAADashboardLayout';
+import { Toaster } from 'react-hot-toast';
 
 export function App() {
   return (
@@ -29,6 +30,7 @@ export function App() {
         />
         <Route path="/*" element={<Login />} key={'other'} />
       </Routes>
+      <Toaster />
     </ThemeProvider>
   );
 }

@@ -3,6 +3,7 @@ import { MemberRegister } from '../../Pages/MemberRegister/MemberRegister';
 import { Box, Typography } from '@mui/material';
 import { DashboardHome } from '../../Pages/DashboardHome';
 import { EmailManagement } from '../../Pages/EmailManagement';
+import { MemberReporting } from '../../Pages/MemberReporting';
 
 // Todo add all standalone page route here
 const routes: RouteObject[] = [
@@ -10,6 +11,10 @@ const routes: RouteObject[] = [
   {
     path: '/manage-member',
     element: <MemberRegister />,
+  },
+  {
+    path: '/report',
+    element: <MemberReporting />,
   },
   {
     path: '/email-management',

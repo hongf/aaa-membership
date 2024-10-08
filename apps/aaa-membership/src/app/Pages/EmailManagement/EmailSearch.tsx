@@ -5,7 +5,7 @@ import {
   type MRT_ColumnDef,
 } from 'material-react-table';
 import { IMember } from '../../schema/memberSchema';
-import { Box } from '@mui/material';
+import { Box, Link } from '@mui/material';
 import { MockEmailCampaignList } from './MockEmailCampaignList';
 import { IEmailCampaign } from '../../schema/emailCampaignSchema';
 import { utcDateToAuDateTimeWithWeekday } from '../../utils/dateHelper';
@@ -70,6 +70,8 @@ export const EmailSearch = () => {
       sx: { minWidth: '300px' },
       variant: 'outlined',
     },
+ 
   });
+
   return <MaterialReactTable table={table} />;
 };
